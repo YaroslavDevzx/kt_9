@@ -18,7 +18,7 @@ public class CubeManager : MonoBehaviour
 
     private GameObject[] _spawnedCubes;
 
-    private void Start()
+    private void Awake()
     {
         CreateCubes();
     }
@@ -67,7 +67,7 @@ public class CubeManager : MonoBehaviour
         {
             Vector3 targetPos = basePosition + Vector3.right * (i * spacing);
             _spawnedCubes[i].transform.position = targetPos;
-            Debug.Log($"Кубик №{i} перемещён на {targetPos}");
+            Debug.Log($"Кубик #{i} перемещён на {targetPos}");
         }
     }
 }
